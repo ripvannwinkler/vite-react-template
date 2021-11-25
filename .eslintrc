@@ -1,0 +1,53 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"jest": true,
+		"node": true
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"plugin:tailwindcss/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 11,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "tailwindcss"],
+	"rules": {
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"max-len": ["warn", 120],
+		"prettier/prettier": ["error"],
+		"react-hooks/exhaustive-deps": "warn",
+		"react-hooks/rules-of-hooks": "error",
+		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off",
+		"sort-imports": [
+			"warn",
+			{
+				"ignoreCase": true,
+				"allowSeparatedGroups": true,
+				"ignoreDeclarationSort": false,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+			}
+		],
+		"tailwindcss/classnames-order": "warn",
+		"tailwindcss/no-contradicting-classname": "error",
+		"tailwindcss/no-custom-classname": "warn"
+	}
+}
